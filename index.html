@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <section>
+    <section class="input">
       <input type="text" name="idade" value="idade" placeholder="idade">
       <button type="button" name="button">Adicionar</button>
     </section>
@@ -24,9 +24,18 @@
       </thead>
       <tbody id="result"></tbody>
       <tfoot>
-        <tr id="average"></tr>
-        <tr id="total"></tr>
-        <tr id="sale"></tr>
+        <tr>
+          <td colspan="2">Média das idades</td>
+          <td id="average"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Total geral</td>
+          <td id="total"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Total com desconto</td>
+          <td id="sale"></td>
+        </tr>
       </tfoot>
     </table>
   </div>
