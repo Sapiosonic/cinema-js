@@ -8,25 +8,32 @@ let sale = document.getElementById('sale');
 
 btn.addEventListener('click', () => {
   const ages = [];
-  let clients_age = Number(input.value)
+  let clients_age = Number(input.value);
   ages.push(clients_age);
   let average = 0;
-  let discount = 0;
+  let discount = [];
 
   for(let i = 0; i < ages.length; i++){
     average = ages[i] / ages.length;
     if(average < 18){
-      discount = 30 * 0.5;
+      let minor
+      discount[i] = 30 * 0.5;
     }
     else{
-      discount = 30 * 0.1;
+      discount[i] = 30 * 0.1;
     }
-  }
 
+  }
   let template = `
      <td>${ages}</td>
      <td>R$ 30.00</td>
      <td>R$ ${discount}</td>
-  `
+  `;
   table.innerHTML += template;
+
+  let avgAge = `
+    <td>${average}</td>
+  `;
+  avg.innerHTML = avgAge;
+
 });
