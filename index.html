@@ -10,8 +10,8 @@
 <body>
   <div class="container">
     <section class="input">
-      <input type="text" name="idade" value="idade" placeholder="idade">
-      <button type="button" name="button">Adicionar</button>
+      <input type="text" placeholder="idade">
+      <button onclick="addValor()">Adicionar</button>
     </section>
 
     <table>
@@ -22,7 +22,9 @@
           <th>Desconto</th>
         </tr>
       </thead>
-      <tbody id="result"></tbody>
+      <tbody id="result">
+        
+      </tbody>
       <tfoot>
         <tr>
           <td colspan="2">Média das idades</td>
@@ -39,5 +41,6 @@
       </tfoot>
     </table>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -5,35 +5,39 @@ let table = document.getElementById('result');
 let avg = document.getElementById('average');
 let total = document.getElementById('total');
 let sale = document.getElementById('sale');
+const idades = [];
+const valor = 30;
+var desconto = 0;
+var soma = 0;
 
-btn.addEventListener('click', () => {
-  const ages = [];
-  let clients_age = Number(input.value);
-  ages.push(clients_age);
-  let average = 0;
-  let discount = [];
+function addValor(){
+    let idade = Number(input.value);
+    idades.push(idade);
 
-  for(let i = 0; i < ages.length; i++){
-    average = ages[i] / ages.length;
-    if(average < 18){
-      let minor
-      discount[i] = 30 * 0.5;
+    for(let i = 0; i < idades.length; i++){
+
+    
+        
+        if(idades[i] < 18){
+            desconto = valor - (valor * 0.5);
+        }
+        if (idades[i] >= 18){
+            desconto = valor - (valor * 0.1);
+        }
+        soma += idades[i];
     }
-    else{
-      discount[i] = 30 * 0.1;
-    }
 
-  }
-  let template = `
-     <td>${ages}</td>
-     <td>R$ 30.00</td>
-     <td>R$ ${discount}</td>
-  `;
-  table.innerHTML += template;
+    let template = `    
+                    <tr>
+                        <td>${idade}</td>
+                        <td>${valor}</td>
+                        <td>${desconto}</td>
+                    </tr>                        
+    `;
+    table.innerHTML += template;
+    total.innerHTML = idades.length * valor;
+    avg.innerHTML = soma / idades.length;
 
-  let avgAge = `
-    <td>${average}</td>
-  `;
-  avg.innerHTML = avgAge;
+};
 
-});
+
