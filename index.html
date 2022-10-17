@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cinema</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <section class="input">
-      <input type="text" placeholder="idade">
-      <button onclick="addValor()">Adicionar</button>
+      <input type="text" id="input" placeholder="idade">
+      <input type="button" id="btn" value="Salvar" onclick="display()">
     </section>
-
     <table>
       <thead>
         <tr>
@@ -23,7 +22,6 @@
         </tr>
       </thead>
       <tbody id="result">
-        <tr></tr>
       </tbody>
       <tfoot>
         <tr>
