@@ -11,14 +11,14 @@
     padding: 10px;
 }
 
-.input input {
+#input {
     width: 195px;
     height: 2rem;
     padding: 5px;
     border: 3px solid grey;
 }
 
-.input button {
+ #btn {
     width: 100px;
     height: 2rem;
     background: rgb(79, 129, 189);
